@@ -1,0 +1,42 @@
+<div class="example-container">
+  <h2>Contact</h2>
+
+  <div
+    cdkDropList
+    #contactList="cdkDropList"
+    [cdkDropListData]="contact"
+    [cdkDropListConnectedTo]="[dialogList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of contact" cdkDrag>{{item}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Dialog</h2>
+
+  <div
+    cdkDropList
+    #dialogList="cdkDropList"
+    [cdkDropListData]="dialog"
+    [cdkDropListConnectedTo]="[contactList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of dialog" cdkDrag>{{item}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Dialog</h2>
+
+  <div
+    cdkDropList
+    #dialogList="cdkDropList"
+    [cdkDropListData]="dialog"
+    [cdkDropListConnectedTo]="[contactList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of dialog" cdkDrag>{{item}}</div>
+  </div>
+</div>
+
